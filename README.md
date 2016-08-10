@@ -1,2 +1,2 @@
 # designwritestudio.github.io
-organization site on github
+https://designwritestudio.github.io/
