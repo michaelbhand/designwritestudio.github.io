@@ -1,0 +1,69 @@
+tags: $:/tags/Stylesheet
+title: $:/_Styles/Dashboard
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+ul.tc-dashboard {
+	list-style: none;
+    padding-left: 0;
+    margin: -0.5em;
+}
+
+ul.tc-dashboard-domain {
+	list-style: none;
+	display: inline-block;
+	padding-left: 0;
+    margin: -0.5em;
+}
+
+li.tc-dashboard-domain > a {
+	display: block;
+	color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+}
+
+li.tc-dashboard-domain > ul {
+	vertical-align: top;
+}
+
+li.tc-dashboard-domain {
+	display: inline-block;
+	background: #4E869f;
+	border: 1px solid #999;
+	padding: 0.5em;
+	margin: 0.5em;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+ul.tc-dashboard-subdomain {
+	list-style: none;
+	padding-left: 0;
+}
+
+li.tc-dashboard-subdomain {
+	border: 1px solid #999;
+	background: #fff;
+	padding: 0.5em;
+	display: inline-block;
+    vertical-align: top;
+    margin: 0.5em;
+}
+
+ul.tc-dashboard-organization {
+	list-style: none;
+}
+
+li.tc-dashboard-organization {
+    text-align: center;
+    border: 1px solid #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+li.tc-dashboard-organization:hover {
+    border: 1px solid #999;
+}
+
+li.tc-dashboard-organization img {
+	width: 6em;
+}

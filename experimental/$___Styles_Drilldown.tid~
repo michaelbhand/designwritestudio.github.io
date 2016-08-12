@@ -1,0 +1,117 @@
+tags: $:/tags/Stylesheet
+title: $:/_Styles/Drilldown
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+	.tc-drilldown-wrapper {
+		font-size: 0.8em;
+	    line-height: 1.5em;
+	}
+
+}
+
+.tc-drilldown-tabs-wrapper {
+	display: flex;
+}
+
+.tc-drilldown-tabs-item {
+	position: relative;
+	flex: 1;
+	color: #fefde9;
+    padding: 0.5em;
+    margin: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tc-drilldown-tabs-item-count {
+    font-size: 0.6em;
+    font-weight: normal;
+    color: #b5b393;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-domain {
+	background: #003e55;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-domain .tc-drilldown-tabs-item-heading {
+	font-size: 1.3em;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-sub-domain {
+	background: #004f6b;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-sub-domain .tc-drilldown-tabs-item-heading {
+	font-size: 1.2em;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-organization {
+	background: #005e80;
+}
+
+.tc-drilldown-tabs-item.tc-drilldown-organization .tc-drilldown-tabs-item-heading {
+	font-size: 1.1em;
+}
+
+.tc-drilldown-tabs-item:hover {
+	background: #67848f;
+	color: #fff;
+}
+
+.tc-drilldown-tabs-wrapper .tc-drilldown-tabs-item.tc-drilldown-tabs-item-selected {
+	background: #e55f53;
+}
+
+.tc-drilldown-tabs-wrapper .tc-drilldown-tabs-item.tc-drilldown-tabs-item-selected:hover {
+	background: #d08a84;
+}
+
+.tc-drilldown-tabs-wrapper .tc-drilldown-tabs-item.tc-drilldown-tabs-item-selected:after {
+    content: '';
+    border: 16px solid transparent;
+    border-top: 16px solid #e55f53;
+    position: absolute;
+    bottom: -32px;
+    margin-left: auto;
+    margin-right: auto;
+    left: calc(50% - 16px);
+}
+
+.tc-drilldown-tabs-wrapper .tc-drilldown-tabs-item.tc-drilldown-tabs-item-selected:hover:after {
+	border-top: 16px solid #d08a84;
+}
+
+.tc-drilldown-tabs-item-heading {
+	text-align: center;
+	font-weight: 700;
+}
+
+.tc-drilldown-tabs-item-logo img {
+	width: 15em;
+    max-width: 80%;
+	margin: 0.5em;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tc-drilldown-description {
+	font-family: "minion-pro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "DejaVu Sans", sans-serif;
+    font-size: 1.3em;
+}
+
+.tc-drilldown-description-button {
+    font-weight: 700;
+	color: #e55f53;
+}
+
+.tc-drilldown-description-button:hover {
+	text-decoration: underline;
+}
+
+.tc-drilldown-detail-logo {
+    max-width: 20%;
+	float: right;
+	margin: 0.5em;
+}

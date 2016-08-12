@@ -1,0 +1,25 @@
+created: 20160812201749900
+modified: 20160812201749900
+tags: $:/tags/ToolbarItem
+title: Dashboard
+
+\define logo()
+{{$(organization)$ (Logo)}}
+\end
+
+<ul class="tc-dashboard">
+<$list filter="[role[domain]]" variable="domain">
+<li class="tc-dashboard-domain"><$link to=<<domain>>><$view tiddler=<<domain>> field="title"/></$link><ul class="tc-dashboard-domain">
+<$list filter="[role[sub-domain]parent<domain>]" variable="sub-domain">
+<li class="tc-dashboard-subdomain"><$link to=<<sub-domain>>><$view tiddler=<<sub-domain>> field="title"/></$link>
+<ul class="tc-dashboard-subdomain">
+<$list filter="[role[organization]tag<sub-domain>]" variable="organization">
+<li class="tc-dashboard-organization" title=<<organization>>><$link to=<<organization>>><<logo>></$link></li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>

@@ -1,0 +1,25 @@
+created: 20160812201749900
+modified: 20160812201749900
+tags: $:/tags/ToolbarItem
+title: Dashboard
+
+\define logo()
+{{$(Level3)$ (Logo)}}
+\end
+
+<ul class="tc-dashboard">
+<$list filter="[role[Level1]]" variable="Level1">
+<li class="tc-dashboard-Level1"><$link to=<<Level1>>><$view tiddler=<<Level1>> field="title"/></$link><ul class="tc-dashboard-Level1">
+<$list filter="[role[Level2]parent<Level1>]" variable="Level2">
+<li class="tc-dashboard-subLevel1"><$link to=<<Level2>>><$view tiddler=<<Level2>> field="title"/></$link>
+<ul class="tc-dashboard-subLevel1">
+<$list filter="[role[Level3]tag<Level2>]" variable="Level3">
+<li class="tc-dashboard-Level3" title=<<Level3>>><$link to=<<Level3>>><<logo>></$link></li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>
