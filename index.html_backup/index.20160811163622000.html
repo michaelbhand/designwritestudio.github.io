@@ -255,8 +255,6 @@ Error message and password prompt
 
 <li>$:/core/macros/list-modified</li>
 
-<li>$:/core/save/all</li>
-
 <li>$:/core/ui/SideBar/More</li>
 
 <li>$:/core/ui/SideBar/Open</li>
@@ -331,9 +329,9 @@ Error message and password prompt
 
 <li>$:/isEncrypted</li>
 
-<li>$:/language/SideBar/thwt/Caption</li>
-
 <li>$:/language/SideBar/THWT/Caption</li>
+
+<li>$:/language/SideBar/thwt/Caption</li>
 
 <li>$:/palette</li>
 
@@ -355,6 +353,82 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/~DesignWrite: A Learning Community--234667409</li>
+
+<li>$:/state/~DesignWrite: A Learning Community?--234667409</li>
+
+<li>$:/state/Excise/-1256782923/new-title</li>
+
+<li>$:/state/Excise/-1256782923/tagnew</li>
+
+<li>$:/state/folded/$:/ControlPanel</li>
+
+<li>$:/state/folded/$:/DesignWrite/icons/show-tiddler</li>
+
+<li>$:/state/folded/Navigation Hints</li>
+
+<li>$:/state/folded/NavigationHintsButtons</li>
+
+<li>$:/state/folded/reveal macro</li>
+
+<li>$:/state/SampleReveal1</li>
+
+<li>$:/state/SampleReveal2</li>
+
+<li>$:/state/SampleReveal3</li>
+
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
+
+<li>$:/state/tab--1498284803</li>
+
+<li>$:/state/tab--1963855381</li>
+
+<li>$:/state/tab-137474337</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab/moresidebar-401116514</li>
+
+<li>$:/state/tab/sidebar--1835078512</li>
+
+<li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
+
+<li>$:/state/toc/{{DesignWrite}} - A Learning Community-DesignWrite Activities-209360082</li>
+
+<li>$:/state/toc/{{DesignWrite}} - A Learning Community-DesignWrite Spaces-209360082</li>
+
+<li>$:/state/toc/DesignWrite Activities-DesignWrite Exercises-209360082</li>
+
+<li>$:/state/toc/DesignWrite Activities-DesignWrite Readings-209360082</li>
+
+<li>$:/state/toc/DesignWrite Activities-DesignWrite Workshops-209360082</li>
+
+<li>$:/state/toc/DesignWrite Exercises-Exercise: Imagining, Designing and Starting A Hypertext-209360082</li>
+
+<li>$:/state/toc/DesignWrite Exercises-Getting Started with TiddlyWiki-209360082</li>
+
+<li>$:/state/toc/DesignWrite Exercises-Intermediate TiddlyWikification-209360082</li>
+
+<li>$:/state/toc/DesignWrite Exercises-Introduction to TiddlyWikification-209360082</li>
+
+<li>$:/state/toc/Exercise: Imagining, Designing and Starting A Hypertext-Permalinks: Imagining, Designing and Starting A Hypertext-209360082</li>
+
+<li>$:/state/toc/Hypertext Theory-Four Words-209360082</li>
+
+<li>$:/state/toc/Hypertext Theory-Hypertextual Techniques-209360082</li>
+
+<li>$:/state/toc/Hypertext Theory-Practicing Hypertextuality-209360082</li>
+
+<li>$:/state/toc/Sections-{{DesignWrite}} - A Learning Community-209360082</li>
+
+<li>$:/state/toc/Sections-DesignWrite - A Learning Community-209360082</li>
+
+<li>$:/state/toc/Sections-Hypertext Theory-209360082</li>
+
+<li>$:/state/Who We Are--234667409</li>
+
 <li>$:/state20160421172942545--2011973021</li>
 
 <li>$:/StaticBanner</li>
@@ -364,6 +438,22 @@ Error message and password prompt
 <li>$:/StoryList</li>
 
 <li>$:/SVGExampleRadius</li>
+
+<li>$:/temp/advancedsearch</li>
+
+<li>$:/temp/appear/RedFlower appear1805725949/block//RedFlower</li>
+
+<li>$:/temp/appear/TestingTwoAppearsInATiddler1563750927/block//RedFlower</li>
+
+<li>$:/temp/appear/TestingTwoAppearsInATiddler1563750927/block//RedTruck</li>
+
+<li>$:/temp/info-plugin</li>
+
+<li>$:/temp/RenameTags/search</li>
+
+<li>$:/temp/search</li>
+
+<li>$:/temp/toc/selectedTiddler</li>
 
 <li>$:/theme</li>
 
@@ -649,9 +739,9 @@ Error message and password prompt
 
 <li>ConversationsSchedule</li>
 
-<li>Convert spreadsheet to TiddlyTable</li>
-
 <li>Convert Spreadsheet to TiddlyTable</li>
+
+<li>Convert spreadsheet to TiddlyTable</li>
 
 <li>Copying tiddlers between TiddlyWiki files</li>
 
@@ -1764,8 +1854,6 @@ Error message and password prompt
 <li>Presentation 2016-01-16</li>
 
 <li>Preserving open tiddlers at startup</li>
-
-<li>preventing state settings from being saved all the time.</li>
 
 <li>previous Operator</li>
 
@@ -11642,12 +11730,6 @@ https://github.com/Jermolene/TiddlyWiki5/edit/master/editions/tw5.com/tiddlers/$
 
 </pre>
 </div>
-<div created="20150620204608925" creator="Andrew Harrison" modified="20160814165145746" modifier="stevesunypoly" tags="Tweaked New DesignWriteMacros" title="$:/core/save/all">
-<pre>\define saveTiddlerFilter()
-[is[tiddler]] -[prefix[$:/state/]] -[prefix[$:/temp/]] -[[$:/HistoryList]] -[[$:/boot/boot.css]] -[type[application/javascript]library[yes]] -[[$:/boot/boot.js]] -[[$:/boot/bootprefix.js]] +[sort[title]]
-\end
-{{$:/core/templates/tiddlywiki5.html}}</pre>
-</div>
 <div caption="{{$:/language/SideBar/More/Caption}}" created="20150722202308059" creator="stevesunypoly" list-after="" modified="20150722202308059" modifier="stevesunypoly" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/More">
 <pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
 &lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; &quot;$:/core/ui/MoreSideBar/Tags&quot; &quot;$:/state/tab/moresidebar&quot; &quot;tc-vertical&quot;&gt;&gt;
@@ -12399,16 +12481,16 @@ $src$
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/core/save/all]]</pre>
+# [[ListingTiddlersWithMacros]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20150722200748141" creator="stevesunypoly" modified="20150722200821294" modifier="stevesunypoly" tags="steveMod" title="$:/language/SideBar/thwt/Caption">
-<pre>thwt-caption</pre>
-</div>
 <div created="20150722200103532" creator="stevesunypoly" modified="20150722200352537" modifier="stevesunypoly" tags="" title="$:/language/SideBar/THWT/Caption">
 <pre>TextHyperWikiTiddly</pre>
+</div>
+<div created="20150722200748141" creator="stevesunypoly" modified="20150722200821294" modifier="stevesunypoly" tags="steveMod" title="$:/language/SideBar/thwt/Caption">
+<pre>thwt-caption</pre>
 </div>
 <div created="20160303212811574" creator="stevesunypoly" modified="20160804192417471" modifier="stevesunypoly" title="$:/palette">
 <pre>$:/palettes/Vanilla</pre>
@@ -14316,6 +14398,120 @@ src: local(&quot;FontAwesome&quot;), url(data:application/font-woff;base64,d09GR
 <div created="20150722174533142" creator="stevesunypoly" modified="20160805143025991" modifier="stevesunypoly" title="$:/SiteTitle">
 <pre>DesignWrite Studio</pre>
 </div>
+<div created="20160808155655044" creator="stevesunypoly" modified="20160808155656720" modifier="stevesunypoly" title="$:/state/~DesignWrite: A Learning Community--234667409">
+<pre></pre>
+</div>
+<div created="20160808155557165" creator="stevesunypoly" modified="20160808155559933" modifier="stevesunypoly" title="$:/state/~DesignWrite: A Learning Community?--234667409">
+<pre></pre>
+</div>
+<div created="20160809155331591" creator="stevesunypoly" modified="20160809155334591" modifier="stevesunypoly" title="$:/state/Excise/-1256782923/new-title">
+<pre>What is a Wiki?</pre>
+</div>
+<div created="20160809155337745" creator="stevesunypoly" modified="20160809155337745" modifier="stevesunypoly" title="$:/state/Excise/-1256782923/tagnew">
+<pre>yes</pre>
+</div>
+<div created="20160808222432232" creator="stevesunypoly" modified="20160809161518058" modifier="stevesunypoly" title="$:/state/folded/$:/ControlPanel">
+<pre>show</pre>
+</div>
+<div created="20160808224239333" creator="stevesunypoly" modified="20160808225620116" modifier="stevesunypoly" title="$:/state/folded/$:/DesignWrite/icons/show-tiddler">
+<pre>show</pre>
+</div>
+<div created="20160808222327984" creator="stevesunypoly" modified="20160808222337303" modifier="stevesunypoly" title="$:/state/folded/Navigation Hints">
+<pre>show</pre>
+</div>
+<div created="20160808234233478" creator="stevesunypoly" modified="20160808234235414" modifier="stevesunypoly" title="$:/state/folded/NavigationHintsButtons">
+<pre>show</pre>
+</div>
+<div created="20160808224247968" creator="stevesunypoly" modified="20160808224247968" modifier="stevesunypoly" title="$:/state/folded/reveal macro">
+<pre>hide</pre>
+</div>
+<div created="20160804192432475" creator="stevesunypoly" modified="20160809155456641" modifier="stevesunypoly" title="$:/state/SampleReveal1">
+<pre>hide</pre>
+</div>
+<div created="20160804193603417" creator="stevesunypoly" modified="20160805143220792" modifier="stevesunypoly" title="$:/state/SampleReveal2">
+<pre>show</pre>
+</div>
+<div created="20160804193558215" creator="stevesunypoly" modified="20160808160016859" modifier="stevesunypoly" title="$:/state/SampleReveal3">
+<pre>hide</pre>
+</div>
+<div created="20160804193342616" creator="stevesunypoly" modified="20160808232110624" modifier="stevesunypoly" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20160804191849478" creator="stevesunypoly" modified="20160811154536455" modifier="stevesunypoly" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
+<div created="20160805151903120" creator="stevesunypoly" modified="20160808232047377" modifier="stevesunypoly" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
+</div>
+<div created="20160804191904539" creator="stevesunypoly" modified="20160808220859711" modifier="stevesunypoly" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+</div>
+<div created="20160811154352749" creator="stevesunypoly" modified="20160811154405628" modifier="stevesunypoly" title="$:/state/tab-137474337">
+<pre>RedDachshund</pre>
+</div>
+<div created="20160804191902596" creator="stevesunypoly" modified="20160809161520372" modifier="stevesunypoly" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
+</div>
+<div created="20160805140347661" creator="stevesunypoly" modified="20160808230158823" modifier="stevesunypoly" title="$:/state/tab/moresidebar-401116514">
+<pre>$:/core/ui/MoreSideBar/Recent</pre>
+</div>
+<div created="20160804192341961" creator="stevesunypoly" modified="20160811154549319" modifier="stevesunypoly" title="$:/state/tab/sidebar--1835078512">
+<pre>Contents</pre>
+</div>
+<div created="20160808222208086" creator="stevesunypoly" modified="20160808222256457" modifier="stevesunypoly" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
+</div>
+<div created="20160805140355459" creator="stevesunypoly" modified="20160805140355459" modifier="stevesunypoly" title="$:/state/toc/{{DesignWrite}} - A Learning Community-DesignWrite Activities-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140417195" creator="stevesunypoly" modified="20160805140419074" modifier="stevesunypoly" title="$:/state/toc/{{DesignWrite}} - A Learning Community-DesignWrite Spaces-209360082">
+<pre>close</pre>
+</div>
+<div created="20160805140356964" creator="stevesunypoly" modified="20160805140356964" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Activities-DesignWrite Exercises-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140409037" creator="stevesunypoly" modified="20160805140411579" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Activities-DesignWrite Readings-209360082">
+<pre>close</pre>
+</div>
+<div created="20160805140414221" creator="stevesunypoly" modified="20160805140415134" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Activities-DesignWrite Workshops-209360082">
+<pre>close</pre>
+</div>
+<div created="20160805140358357" creator="stevesunypoly" modified="20160805140358357" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Exercises-Exercise: Imagining, Designing and Starting A Hypertext-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140402946" creator="stevesunypoly" modified="20160805140402946" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Exercises-Getting Started with TiddlyWiki-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140405003" creator="stevesunypoly" modified="20160805140405003" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Exercises-Intermediate TiddlyWikification-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140406790" creator="stevesunypoly" modified="20160805140406790" modifier="stevesunypoly" title="$:/state/toc/DesignWrite Exercises-Introduction to TiddlyWikification-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140400267" creator="stevesunypoly" modified="20160805140400267" modifier="stevesunypoly" title="$:/state/toc/Exercise: Imagining, Designing and Starting A Hypertext-Permalinks: Imagining, Designing and Starting A Hypertext-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805141726160" creator="stevesunypoly" modified="20160805141726160" modifier="stevesunypoly" title="$:/state/toc/Hypertext Theory-Four Words-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805171926677" creator="stevesunypoly" modified="20160805171926677" modifier="stevesunypoly" title="$:/state/toc/Hypertext Theory-Hypertextual Techniques-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805171924806" creator="stevesunypoly" modified="20160805171924806" modifier="stevesunypoly" title="$:/state/toc/Hypertext Theory-Practicing Hypertextuality-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805140353808" creator="stevesunypoly" modified="20160805140353808" modifier="stevesunypoly" title="$:/state/toc/Sections-{{DesignWrite}} - A Learning Community-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805141306929" creator="stevesunypoly" modified="20160808154519414" modifier="stevesunypoly" title="$:/state/toc/Sections-DesignWrite - A Learning Community-209360082">
+<pre>open</pre>
+</div>
+<div created="20160805141724298" creator="stevesunypoly" modified="20160808154201729" modifier="stevesunypoly" title="$:/state/toc/Sections-Hypertext Theory-209360082">
+<pre>close</pre>
+</div>
+<div created="20160808155651384" creator="stevesunypoly" modified="20160808155653002" modifier="stevesunypoly" title="$:/state/Who We Are--234667409">
+<pre></pre>
+</div>
 <div created="20160421172945809" creator="stevesunypoly" modified="20160421172951698" modifier="stevesunypoly" title="$:/state20160421172942545--2011973021">
 <pre></pre>
 </div>
@@ -14326,11 +14522,138 @@ src: local(&quot;FontAwesome&quot;), url(data:application/font-woff;base64,d09GR
 <div created="20150719135130273" creator="s" modified="20150719135133739" modifier="stevesunypol" title="$:/status/UserName">
 <pre>stevesunypoly</pre>
 </div>
-<div list="[[preventing state settings from being saved all the time.]] [[Hello There]]" title="$:/StoryList">
+<div list="SharedTiddlyWikis [[Work in the Studio]] [[Hello There]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160303225345629" creator="stevesunypoly" modified="20160303225354346" modifier="stevesunypoly" title="$:/SVGExampleRadius">
 <pre>10</pre>
+</div>
+<div created="20160805151903118" creator="stevesunypoly" modified="20160811154800627" modifier="stevesunypoly" title="$:/temp/advancedsearch">
+<pre>appear</pre>
+</div>
+<div created="20160811154638447" creator="stevesunypoly" modified="20160811154709329" modifier="stevesunypoly" title="$:/temp/appear/RedFlower appear1805725949/block//RedFlower">
+<pre></pre>
+</div>
+<div created="20160811154732382" creator="stevesunypoly" modified="20160811154733182" modifier="stevesunypoly" title="$:/temp/appear/TestingTwoAppearsInATiddler1563750927/block//RedFlower">
+<pre></pre>
+</div>
+<div created="20160811154734396" creator="stevesunypoly" modified="20160811154740817" modifier="stevesunypoly" title="$:/temp/appear/TestingTwoAppearsInATiddler1563750927/block//RedTruck">
+<pre></pre>
+</div>
+<div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/info/browser&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser&quot;,
+            &quot;text&quot;: &quot;yes&quot;
+        },
+        &quot;$:/info/node&quot;: {
+            &quot;title&quot;: &quot;$:/info/node&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/name&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/name&quot;,
+            &quot;text&quot;: &quot;Chrome&quot;
+        },
+        &quot;$:/info/browser/version&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/version&quot;,
+            &quot;text&quot;: &quot;41.0&quot;
+        },
+        &quot;$:/info/browser/is/webkit&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/webkit&quot;,
+            &quot;text&quot;: &quot;yes&quot;
+        },
+        &quot;$:/info/browser/is/gecko&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/gecko&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/chrome&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/chrome&quot;,
+            &quot;text&quot;: &quot;yes&quot;
+        },
+        &quot;$:/info/browser/is/firefox&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/firefox&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/ios&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/ios&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/iphone&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/iphone&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/ipad&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/ipad&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/ipod&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/ipod&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/opera&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/opera&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/phantomjs&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/phantomjs&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/safari&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/safari&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/seamonkey&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/seamonkey&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/blackberry&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/blackberry&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/webos&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/webos&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/silk&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/silk&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/bada&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/bada&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/tizen&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/tizen&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/sailfish&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/sailfish&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/android&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/android&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/windowsphone&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/windowsphone&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        },
+        &quot;$:/info/browser/is/firefoxos&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser/is/firefoxos&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        }
+    }
+}</pre>
+</div>
+<div created="20160805141053249" creator="stevesunypoly" modified="20160805141110157" modifier="stevesunypoly" title="$:/temp/RenameTags/search">
+<pre>{{DesignWrite}} - A Learning Community</pre>
+</div>
+<div created="20160804192436183" creator="stevesunypoly" modified="20160811162118295" modifier="stevesunypoly" title="$:/temp/search">
+<pre>Google shee</pre>
+</div>
+<div created="20160811154454162" creator="stevesunypoly" modified="20160811154503622" modifier="stevesunypoly" title="$:/temp/toc/selectedTiddler">
+<pre>RedTruck</pre>
 </div>
 <div created="20160303212953453" creator="stevesunypoly" modified="20160803202249471" modifier="stevesunypoly" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -16055,19 +16378,6 @@ In this case, please clearly state so, since otherwise we assume that you are th
 <div created="20160107210624780" creator="stevesunypoly" modified="20160119184542929" modifier="stevesunypoly" tags="" title="ConversationsSchedule">
 <pre>Wednesdays at 10am NY time ([[convert to other timezones|http://www.thetimezoneconverter.com/?t=10am&amp;tz=New%20York&amp;]])</pre>
 </div>
-<div created="20160131011055135" creator="stevesunypoly" modified="20160330131034017" modifier="stevesunypoly" tags="" title="Convert spreadsheet to TiddlyTable">
-<pre>To convert a range of cells in a Google spreadsheet to a [[TiddlyWiki Table|Tables in WikiText]]&quot;
-# Copy range of cells to clipboard buffer.
-# Paste results in box below.
-# Press translate button.
-# Select all in box below.
-# Copy to clipboard buffer.
-# Paste  results in  text box of a TiddlyWiki tiddler
-
-``A``[[kludge|https://en.wikipedia.org/wiki/Kludge]]``. Code only works when embedded within a Tiddlyspace wiki (or perhaps  ``TiddlyWikiClassic``. Visit ``http://ubiquitous-hypertextuality.tiddlyspace.com/``.``
-
-&lt;iframe src=&quot;http://bit.do/designwrite-convert-spreadsheet-to-tiddlytable&quot; width=&quot;100%&quot; height=&quot;500px&quot;&gt;&gt;</pre>
-</div>
 <div created="20151210010719002" creator="stevesunypoly" modified="20151210010815725" modifier="stevesunypoly" tags="" title="Convert Spreadsheet to TiddlyTable">
 <pre>&lt;html&gt;
 	&lt;p align=&quot;center&quot;&gt;
@@ -16086,6 +16396,19 @@ This function will insert {{{|}}} at the beginning and end of each line, and in 
 Hint: adding an {{{h}}} to the end of the first row will make your table sortable.
 
 [[Source|http://oldwiki.tiddlywiki.org/wiki/How_To/Converting_Excel_Spreadsheets_to_TiddlyWiki_Tables]]</pre>
+</div>
+<div created="20160131011055135" creator="stevesunypoly" modified="20160330131034017" modifier="stevesunypoly" tags="" title="Convert spreadsheet to TiddlyTable">
+<pre>To convert a range of cells in a Google spreadsheet to a [[TiddlyWiki Table|Tables in WikiText]]&quot;
+# Copy range of cells to clipboard buffer.
+# Paste results in box below.
+# Press translate button.
+# Select all in box below.
+# Copy to clipboard buffer.
+# Paste  results in  text box of a TiddlyWiki tiddler
+
+``A``[[kludge|https://en.wikipedia.org/wiki/Kludge]]``. Code only works when embedded within a Tiddlyspace wiki (or perhaps  ``TiddlyWikiClassic``. Visit ``http://ubiquitous-hypertextuality.tiddlyspace.com/``.``
+
+&lt;iframe src=&quot;http://bit.do/designwrite-convert-spreadsheet-to-tiddlytable&quot; width=&quot;100%&quot; height=&quot;500px&quot;&gt;&gt;</pre>
 </div>
 <div created="20140908131700000" modified="20140919161524603" tags="Learning" title="Copying tiddlers between TiddlyWiki files" type="text/vnd.tiddlywiki">
 <pre>You can copy an individual tiddler from one TiddlyWiki file to another by dragging a link to the tiddler from one browser window to another.
@@ -23461,21 +23784,6 @@ Sometimes it's useful to re-open the same tiddlers that were open when the file 
 
 This filter returns the tiddlers specified in the [[$:/StoryList]] tiddler, which is the system tiddler that TiddlyWiki uses to store the sequence of tiddlers in the current story.
 </pre>
-</div>
-<div created="20160814164113748" creator="stevesunypoly" modified="20160814165229927" modifier="stevesunypoly" tags="DesignWriteMacros" title="preventing state settings from being saved all the time.">
-<pre>Thanks, Hegart!
-
-From Hegart Dmishiv &lt;hegart.dmishiv@gmail.com&gt; 
-
-to {{DesignWrITe}} 
-
-Hi Steve,
-
-I notice that the main {{DesignWrite}} TiddlyWiki often gets saved with your SideBar's search bar in use, hiding your SideBar TOC from our immediate view. You can create a shadow tiddler for $:/core/save/all to prevent the $:/state and $:/temp settings from being saved whenever you save your TiddlyWiki. I use the same technique to ensure that my SideBar's TOC is always fully collapsed when my TiddlyWiki is opened up. See this discussion on the official TiddlyWiki forums for details.
-
-Kind regards,
-
-Hegart.</pre>
 </div>
 <div caption="previous" created="20140410103123179" modified="20150203190515000" op-input="a [[selection of titles|Title Selection]]" op-output="a selection containing each title that immediately precedes each of the input titles in the &lt;&lt;.field list&gt;&gt; field of &lt;&lt;.place T&gt;&gt;" op-parameter="a tiddler title" op-parameter-name="T" op-purpose="find which titles in a &lt;&lt;.field list&gt;&gt; field precede the input ones" tags="[[Filter Operators]] [[Field Operators]] [[Order Operators]]" title="previous Operator" type="text/vnd.tiddlywiki">
 <pre>Each input title is processed in turn, and its predecessor is located in the &lt;&lt;.field list&gt;&gt; field and appended to the output. If a title is not listed in the field, or is the first item there, then it contributes nothing to the output.

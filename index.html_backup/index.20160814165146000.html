@@ -465,9 +465,9 @@ Error message and password prompt
 
 <li>Announcing PopupTagger</li>
 
-<li>Appear</li>
-
 <li>appear</li>
+
+<li>Appear</li>
 
 <li>appear-template</li>
 
@@ -868,6 +868,8 @@ Error message and password prompt
 <li>Draft of 'JeremyRuston'</li>
 
 <li>Draft of 'New Tiddler 1'</li>
+
+<li>Draft of 'New Tiddler 7'</li>
 
 <li>Draft of 'New Tiddler'</li>
 
@@ -1764,8 +1766,6 @@ Error message and password prompt
 <li>Presentation 2016-01-16</li>
 
 <li>Preserving open tiddlers at startup</li>
-
-<li>preventing state settings from being saved all the time.</li>
 
 <li>previous Operator</li>
 
@@ -14326,7 +14326,7 @@ src: local(&quot;FontAwesome&quot;), url(data:application/font-woff;base64,d09GR
 <div created="20150719135130273" creator="s" modified="20150719135133739" modifier="stevesunypol" title="$:/status/UserName">
 <pre>stevesunypoly</pre>
 </div>
-<div list="[[preventing state settings from being saved all the time.]] [[Hello There]]" title="$:/StoryList">
+<div list="$:/core/save/all $:/Import [[Draft of 'New Tiddler 7']] [[Hello There]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160303225345629" creator="stevesunypoly" modified="20160303225354346" modifier="stevesunypoly" title="$:/SVGExampleRadius">
@@ -15074,6 +15074,9 @@ The &lt;&lt;.olink is&gt;&gt; operator is similar, but its scope is restricted t
 !! How to get and use the {{Popup Tagger DropboxURL}}
 </pre>
 </div>
+<div bag="default" created="20151209180857097" creator="Tobias Beer" modified="20160212211422370" modifier="stevesunypoly" revision="0" tabs="Info Attributes Examples Defaults Modes States Styles Install" tags="Plugins Widgets" title="appear" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;plugin-docs appear&gt;&gt;</pre>
+</div>
 <div created="20160212211251455" creator="stevesunypoly" modified="20160218164456901" modifier="stevesunypoly" tags="[[TiddlyWiki Playground]]" title="Appear">
 <pre>Appear is cool! It makes things, well, appear. 
 
@@ -15081,9 +15084,6 @@ The &lt;&lt;.olink is&gt;&gt; operator is similar, but its scope is restricted t
 * The Appear plugin enhances transclusion capabilities in TiddlyWiki.
 * Look at these, then visit [[Source|http://tobibeer.github.io/tw5-plugins/#appear]] and follow install instructions.
 &lt;&lt;taggly&gt;&gt;</pre>
-</div>
-<div bag="default" created="20151209180857097" creator="Tobias Beer" modified="20160212211422370" modifier="stevesunypoly" revision="0" tabs="Info Attributes Examples Defaults Modes States Styles Install" tags="Plugins Widgets" title="appear" type="text/vnd.tiddlywiki">
-<pre>&lt;&lt;plugin-docs appear&gt;&gt;</pre>
 </div>
 <div created="20160218172627943" creator="stevesunypoly" modified="20160218173005069" modifier="stevesunypoly" tags="$:/tags/ViewTemplate Appear" title="appear-template">
 <pre>&lt;$list filter=&quot;[is[current]tag[appear-template]]&quot;&gt;
@@ -17312,6 +17312,21 @@ Further information:
 </div>
 <div created="20151211164909888" creator="stevesunypoly" draft.of="New Tiddler 1" draft.title="Topics in " modified="20151211164921249" modifier="stevesunypoly" tags="" title="Draft of 'New Tiddler 1'">
 <pre></pre>
+</div>
+<div created="20160814164113748" creator="stevesunypoly" draft.of="New Tiddler 7" draft.title="New Tiddler 7" modified="20160814164151806" modifier="stevesunypoly" tags="" title="Draft of 'New Tiddler 7'">
+<pre>Thanks, Hegart!
+
+From Hegart Dmishiv &lt;hegart.dmishiv@gmail.com&gt; 
+
+to {{DesignWrITe}} 
+
+Hi Steve,
+
+I notice that the main {{DesignWrite}} TiddlyWiki often gets saved with your SideBar's search bar in use, hiding your SideBar TOC from our immediate view. You can create a shadow tiddler for $:/core/save/all to prevent the $:/state and $:/temp settings from being saved whenever you save your TiddlyWiki. I use the same technique to ensure that my SideBar's TOC is always fully collapsed when my TiddlyWiki is opened up. See this discussion on the official TiddlyWiki forums for details.
+
+Kind regards,
+
+Hegart.</pre>
 </div>
 <div created="20151210002259284" creator="stevesunypoly" draft.of="New Tiddler" draft.title="New Tiddler" modified="20151210004655358" modifier="stevesunypoly" tags="" title="Draft of 'New Tiddler'">
 <pre></pre>
@@ -23461,21 +23476,6 @@ Sometimes it's useful to re-open the same tiddlers that were open when the file 
 
 This filter returns the tiddlers specified in the [[$:/StoryList]] tiddler, which is the system tiddler that TiddlyWiki uses to store the sequence of tiddlers in the current story.
 </pre>
-</div>
-<div created="20160814164113748" creator="stevesunypoly" modified="20160814165229927" modifier="stevesunypoly" tags="DesignWriteMacros" title="preventing state settings from being saved all the time.">
-<pre>Thanks, Hegart!
-
-From Hegart Dmishiv &lt;hegart.dmishiv@gmail.com&gt; 
-
-to {{DesignWrITe}} 
-
-Hi Steve,
-
-I notice that the main {{DesignWrite}} TiddlyWiki often gets saved with your SideBar's search bar in use, hiding your SideBar TOC from our immediate view. You can create a shadow tiddler for $:/core/save/all to prevent the $:/state and $:/temp settings from being saved whenever you save your TiddlyWiki. I use the same technique to ensure that my SideBar's TOC is always fully collapsed when my TiddlyWiki is opened up. See this discussion on the official TiddlyWiki forums for details.
-
-Kind regards,
-
-Hegart.</pre>
 </div>
 <div caption="previous" created="20140410103123179" modified="20150203190515000" op-input="a [[selection of titles|Title Selection]]" op-output="a selection containing each title that immediately precedes each of the input titles in the &lt;&lt;.field list&gt;&gt; field of &lt;&lt;.place T&gt;&gt;" op-parameter="a tiddler title" op-parameter-name="T" op-purpose="find which titles in a &lt;&lt;.field list&gt;&gt; field precede the input ones" tags="[[Filter Operators]] [[Field Operators]] [[Order Operators]]" title="previous Operator" type="text/vnd.tiddlywiki">
 <pre>Each input title is processed in turn, and its predecessor is located in the &lt;&lt;.field list&gt;&gt; field and appended to the output. If a title is not listed in the field, or is the first item there, then it contributes nothing to the output.
