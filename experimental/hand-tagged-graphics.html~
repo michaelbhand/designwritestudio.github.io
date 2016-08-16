@@ -1,17 +1,27 @@
-<div style="position:absolute; z-index:1000; top:10px; right:10px; width:300px; color:#fff">
+<html>
+<head>
+    <title>Hand-tagged graphics for tiddlywiki</title>
+</head>
+<meta name="copyright" content="Michael Hand. License: GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007. Information: steve@sunyit.edu">  
+<body style="background: black;">
+
+
+
+  <div style="position:relative; z-index:1000; top:10px; right:10px; width:100%; color:#fff">
     <form action="" name="ctrls">
-        <div>Radius: <input name = 'i'></div>
-        <div> X: <input name = 'x'></div>
-        <div> Y: <input name = 'y'></div>
-        <div> R: <input name = 'r'></div>
-        <div> G: <input name = 'g'></div>
-        <div> B: <input name = 'b'></div>
-        <div>RI: <input name = 'ri'></div>
-        <div>GI: <input name = 'gi'></div>
-        <div>BI: <input name = 'bi'></div>
-        <div><input type="radio" name="rand" value="1" checked>Random</div>
-        <div><input type="radio" name="rand" value="0">Custom</div>
-        <div> <input type='submit' value='Submit' /></div>
+      Radius: <input name = 'i'> ||
+      X: <input name = 'x'> ||
+      Y: <input name = 'y'> ||
+      R: <input name = 'r'> ||
+      G: <input name = 'g'> ||
+      B: <input name = 'b'> ||
+      RI: <input name = 'ri'> ||
+      GI: <input name = 'gi'> ||
+      BI: <input name = 'bi'> ||
+       <input type="radio" name="rand" value="1" checked>Random ||
+       <input type="radio" name="rand" value="0">Custom ||
+        <input type='submit' value='Submit' />
     </form>
 <div>
 
@@ -184,3 +194,8 @@ canvAnim.init();
 
 
     </script>
+
+
+
+</body>
+</html>
