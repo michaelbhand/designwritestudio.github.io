@@ -1,32 +1,44 @@
 <html>
 <head>
     <title>Hand-tagged graphics for tiddlywiki</title>
+    <link rel="stylesheet" type="text/css" href="hand_tagged.css">
 </head>
+
 <!-- Copyright Michael Hand. License: GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007. Information: steve@sunyit.edu -->
 <body style="background: black;">
-
-
-
-  <div style="position:relative; z-index:1000; top:10px; right:10px; width:100%; color:#fff">
+  <div class="panel_container">
     <form action="" name="ctrls">
-      Click random and submit a few times. Change value(s) and click submit. Try radius=1000<br>
-      Imagine values being set as tags?<br>
-      Radius: <input name = 'i'> ||
-      X: <input name = 'x'> ||
-      Y: <input name = 'y'> <br>
-      R: <input name = 'r'> ||
-      G: <input name = 'g'> ||
-      B: <input name = 'b'> <br>
-      RI: <input name = 'ri'> ||
-      GI: <input name = 'gi'> ||
-      BI: <input name = 'bi'> ||
-       <input type="radio" name="rand" value="1" >Random ||
-       <input type="radio" name="rand" value="0" checked>Custom ||
-        <input type='submit' value='Submit' />
+        <ul>
+            <li class='call_to_action'>      Click random and submit a few times. Change value(s) and click submit.</li>
+            <li><button id="R1000">Try radius=1000</button></li>
+            <!--<li>      Imagine values being set as tags?</li> -->
+            <li>Radius: <input name = 'i'> ||</li>
+            <div class='position'>
+            <li>X: <input name = 'x'> ||</li>
+            <li>Y: <input name = 'y'> </li>
+            </div>
+            <div class='color'>
+                <li>R: <input name = 'r'> ||</li>
+                <li>G: <input name = 'g'> ||</li>
+                <li>B: <input name = 'b'> </li>
+            </div>
+            <div class='color_incrementation'>
+                <li>RI: <input name = 'ri'> ||</li>
+                <li>GI: <input name = 'gi'> ||</li>
+                <li>BI: <input name = 'bi'> ||</li>
+            </div>
+            <div class='random_custom'>
+                <li><input type="radio" name="rand" value="1" >Random ||</li>
+                <li><input type="radio" name="rand" value="0" checked>Custom ||</li>
+            </div>
+            <li><input type='submit' value='Submit' id="submit" /></li>
+        </ul>
     </form>
 <div>
 
     <script type="text/javascript">
+var debug = 0;
+
 var makeColor = function() {
     return Math.floor(Math.random() * 255);
 };
@@ -46,7 +58,7 @@ var randScrn = function(D){
 
 if(document.location.search){
     var dtaArray = /((&)?((.)+=\d+\.?(\d+)?))+/.exec(document.location.search)[0].split('&');
-    console.log(dtaArray);
+    if(debug){console.log('dtaArray: ', dtaArray);}
     var data = {
     "radius" : dtaArray[0].split('=')[1],
     "xinc" : dtaArray[1].split('=')[1],
@@ -73,11 +85,12 @@ document.forms['ctrls']['gi'].value = data.rand > 0 ? randInc() : data.gi;
 document.forms['ctrls']['bi'].value = data.rand > 0 ? randInc() : data.bi;
 
 
-console.log("radius: ", data.radius, ", xinc: ", data.xinc, ", yinc: ", data.yinc, ", r: ", data.r , " g:", data.g , " b:", data.b, " ri: ",  data.ri , " gi: ", data.gi , " bi: ", data.bi);
+if(debug){console.log("radius: ", data.radius, ", xinc: ", data.xinc, ", yinc: ", data.yinc, ", r: ", data.r , " g:", data.g , " b:", data.b, " ri: ",  data.ri , " gi: ", data.gi , " bi: ", data.bi);}
 
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 var ratio = 1/1.6180339887;
+// var ratio = 0.13/1;
 
 var spawnLen = 20.02;
 var spCount = 0;
@@ -86,25 +99,43 @@ var spLmt = 500;
 
 var canvAnim  = {
     anim:{
-          size:window.innerHeight,
-          // rect:{x : 0, y : 0, inc : {x : data.xinc, y:data.yinc}, radius:data.radius},
-          rect:{x : 0, y : 0, inc : {x : parseFloat(data.xinc), y:parseFloat(data.yinc)}, radius:data.radius},
-          scr:{x:window.innerWidth,y:window.innerHeight},
-          inc:{x:randInc(),y:randInc()},
-          midCnv:{x:window.innerWidth/2,y:window.innerHeight/2},
-          c:{r:parseInt(data.r),g:parseInt(data.g),b:parseInt(data.b)},
-          ci:{r:parseInt(data.ri),g:parseInt(data.gi),b:parseInt(data.bi)},
-          clearCount:0
-        },
+      size:window.innerHeight,
+      // rect:{x : 0, y : 0, inc : {x : data.xinc, y:data.yinc}, radius:data.radius},
+      rect:{x : 0, y : 0, inc : {x : parseFloat(data.xinc), y:parseFloat(data.yinc)}, radius:data.radius},
+      scr:{x:window.innerWidth,y:window.innerHeight},
+      inc:{x:randInc(),y:randInc()},
+      midCnv:{x:window.innerWidth/2,y:window.innerHeight/2},
+      c:{r:parseInt(data.r),g:parseInt(data.g),b:parseInt(data.b)},
+      ci:{r:parseInt(data.ri),g:parseInt(data.gi),b:parseInt(data.bi)},
+      clearCount:0
+    },
+    tryR1000: function(){
+        document.forms['ctrls']['i'].value = 1000;
+    },
     init:function(){
 
-    console.log('Radius: ' + canvAnim.anim.rect.radius + '  Incx: ' + canvAnim.anim.rect.inc.x  + ' Incy: ' + canvAnim.anim.rect.inc.y);
-    console.log('colorTrans: ', canvAnim.colorTrans());
-    console.log('colorIncrem: ', 'rgba(' + Math.floor(canvAnim.anim.ci.r) + ',' + Math.floor(canvAnim.anim.ci.g) + ',' + Math.floor(canvAnim.anim.ci.b) + ',0.5)');
+    var R1000 = document.getElementById('R1000'),
+    submitBtn = document.getElementById('submit');
+
+    if(R1000 && submitBtn){
+        R1000.addEventListener('click',function(e){
+            e.preventDefault();
+            canvAnim.tryR1000();
+            submitBtn.click();
+        });
+    }
 
 
+    if(debug){
+        console.log(
+            'Radius: ' + canvAnim.anim.rect.radius,
+            'Incx: ' + canvAnim.anim.rect.inc.x,
+            'Incy: ' + canvAnim.anim.rect.inc.y,
+            'colorTrans: ' + canvAnim.colorTrans(),
+            'colorIncrem: ' + 'rgba(' + Math.floor(canvAnim.anim.ci.r) + ',' + Math.floor(canvAnim.anim.ci.g) + ',' + Math.floor(canvAnim.anim.ci.b) + ',0.5)'
+            );
+    }
 
-   // console.log('Rinc: ' + canvAnim.anim.ci.r + ', Ginc: ' + canvAnim.anim.ci.g + ', Binc: ' + canvAnim.anim.ci.b);
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         document.body.style.background = '#000';
@@ -183,7 +214,6 @@ var canvAnim  = {
         canvAnim.incrementColor('r');
         canvAnim.incrementColor('g');
         canvAnim.incrementColor('b');
-        // console.log('rgba(' + Math.floor(canvAnim.anim.c.r) + ',' + Math.floor(canvAnim.anim.c.g) + ',' + Math.floor(canvAnim.anim.c.b) + ',0.5)');
         return 'rgba(' + Math.floor(canvAnim.anim.c.r) + ',' + Math.floor(canvAnim.anim.c.g) + ',' + Math.floor(canvAnim.anim.c.b) + ',0.5)';
     }
 };
@@ -195,9 +225,5 @@ canvAnim.init();
 
 
     </script>
-
-
-
 </body>
-      source code: https://github.com/DesignWriteStudio/designwritestudio.github.io/blob/master/experimental/hand-tagged-graphics.html<br>
 </html>
